@@ -1,6 +1,7 @@
 import { card } from '../assets';
 import styles, { layout } from '../style';
 import Button from './Button';
+import Tilt from 'react-parallax-tilt';
 
 const CardDeal = () => (
     
@@ -13,7 +14,9 @@ const CardDeal = () => (
       </div>
       
       <div className={layout.sectionImg}>
-        <img src={card} alt="card" className="w-[100%] h-[100%]"/>
+        <Tilt className="tilt-img" tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={500} scale={1.1} transitionSpeed={1000} gyroscope={true}>
+          <img src={card} alt="card" className="w-[100%] h-[100%]"/>
+        </Tilt>
       </div>
     </section>
 
